@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00194A"
+    tools:context=".HomeFragment">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/search"
+        android:src="@drawable/ic_baseline_search_24"
+        android:layout_margin="20dp"
+        android:layout_alignParentEnd="true"
+        ></ImageView>
+
+    <TextView
+        android:id="@+id/headermovies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Movies"
+        android:textColor="@color/white"
+        android:textSize="30sp"></TextView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/MenuHamburger"
+        android:src="@drawable/ic_baseline_menu_24"
+        android:layout_margin="20dp"
+        ></ImageView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:id="@+id/movies"
+        android:layout_below="@+id/MenuHamburger"
+        >
+
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/vpmovies"
+            ></androidx.viewpager.widget.ViewPager>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/nowshowingheading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/movies"
+        android:layout_centerHorizontal="true"
+        android:text="now showing"
+        android:textSize="20sp"
+        android:textColor="@color/white" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/nowshowingheading"
+        android:id="@+id/nowshowing"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/movierv"
+            ></androidx.recyclerview.widget.RecyclerView>
+
+    </FrameLayout>
+
+
+</RelativeLayout>
